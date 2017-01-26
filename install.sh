@@ -1,5 +1,5 @@
 #!/bin/sh
-
+mount -o remount,rw /
 update-rc.d -f imx-watchdog remove
 update-rc.d -f imx-keepalive remove
 update-rc.d -f watchdog remove
