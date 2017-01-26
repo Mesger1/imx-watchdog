@@ -1,5 +1,8 @@
 #!/bin/sh
 
+
+update-rc.d -f watchdog remove
+update-rc.d -f wd_keepalive remove
 sudo apt-get update
 sudo apt-get install git
 git clone https://github.com/gerdmestdagh/imx-watchdog
