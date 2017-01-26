@@ -1,5 +1,9 @@
 #!/bin/sh
 
+sudo apt-get update
+sudo apt-get install git
+git clone https://github.com/gerdmestdagh/imx-watchdog
+cd imx-watchdog
 cp ./devregs /usr/bin
 cp ./imx-pinger /usr/bin
 cp ./imx-watchdog /etc/init.d
