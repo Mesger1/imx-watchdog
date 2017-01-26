@@ -15,3 +15,5 @@ sudo cp ./imx-watchdog /etc/init.d
 sudo cp ./imx-keepalive /etc/init.d
 sudo update-rc.d -f imx-watchdog start 1 S .
 sudo update-rc.d -f imx-keepalive start 1 2 .
+cd ..
+rm -rf imx-watchdog
