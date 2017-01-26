@@ -22,3 +22,7 @@ http://www.nxp.com/assets/documents/data/en/reference-manuals/IMX6SLRM.pdf
 ### syntax for devregs is :
  * read : devregs 0x20bc000
  * write : devregs 0x20bc000 0x0034
+
+
+### Install with :
+ > wget -q -O - http://github.com/gerdmestdagh/imx-watchdog/install.sh | bash
