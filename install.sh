@@ -1,6 +1,7 @@
 #!/bin/sh
 
-
+update-rc.d -f imx-watchdog remove
+update-rc.d -f imx-keepalive remove
 update-rc.d -f watchdog remove
 update-rc.d -f wd_keepalive remove
 sudo apt-get update
