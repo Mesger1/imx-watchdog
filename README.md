@@ -1,11 +1,11 @@
 # WATCHDOG BREAKDOWN
 Two watchdogs :
-IMX internal ARM chip watchdog:
-http://www.nxp.com/assets/documents/data/en/reference-manuals/IMX6SLRM.pdf
-APX external apx chip watchdog, this repo concerns IMX Watchdog only
+ * IMX internal ARM chip watchdog:
+ * (APX external apx chip watchdog, this repo concerns IMX Watchdog only
 
 ## IMX WATCHDOG
-Devregs (tool for reading and setting registers) :
+http://www.nxp.com/assets/documents/data/en/reference-manuals/IMX6SLRM.pdf 
+### Devregs (tool for reading and setting registers) :
  * https://github.com/boundarydevices/devregs
  * copy .dat files to /etc/
  * compile src/devregs.cpp with :
