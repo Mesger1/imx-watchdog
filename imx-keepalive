@@ -1,0 +1,42 @@
+#!/bin/sh
+#/etc/init.d/imx-watchdog: start imx-watchdog daemon.
+
+### BEGIN INIT INFO
+# Provides:          imx-watchdog
+# Short-Description: Start hardware imx-watchdog daemon
+# X-Start-Before:    checkroot
+# Should-Stop:       
+# Default-Start:     2
+### END INIT INFO
+
+
+LOG_FILE=/var/log/imx-watchdog.log
+PATH=/usr/bin:/etc/init.d
+. /lib/lsb/init-functions
+
+case "$1" in
+  start)
+	printf "%-50s" " * Starting imx-keepalive..."
+	printf "\t\t\t%s\n" " [ OK ]"
+	imx-pinger $LOG_FILE 5 &> /dev/null
+	echo "imx-pinger started" >> $LOG_FILE
+	;;
+  stop)
+	printf "%-50s" " * Stopping imx-keepalive...                  "
+	printf "\t\t\t%s\n" " [ OK ]"
+	echo "keepalive stops pinging now" >> $LOG_FILE
+	killall imx-pinger
+	;;
+  status)
+	red='\033[0;31m'
+	white='\33[0;37m'
+	wdt_register=`devregs 0x20bc000 | tail -c 3`
+	status_of_proc imx-pinger imx-keepalive 	
+    	;;
+  *)
+	echo "Usage: /etc/init.d/imx-keepalive {start|stop|status}"
+	exit 1
+	;;
+esac
+
+exit 0

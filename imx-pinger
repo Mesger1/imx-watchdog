@@ -1,0 +1,12 @@
+#!/bin/sh
+
+PATH=/bin:/usr/bin
+
+while [ 1 ]
+do
+	echo "Pinging imx-watchdog with a ${2} seconds interval" >> $1
+	devregs 0x20bc002 0x5555 > /dev/null
+	devregs 0x20bc002 0xAAAA > /dev/null
+	sleep $2
+done
+exit 0
