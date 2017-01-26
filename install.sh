@@ -4,10 +4,9 @@ sudo update-rc.d -f imx-watchdog remove
 sudo update-rc.d -f imx-keepalive remove
 sudo update-rc.d -f watchdog remove
 sudo update-rc.d -f wd_keepalive remove
-sudo apt-get update
 sudo apt-get install git
 git clone https://github.com/gerdmestdagh/imx-watchdog
-sudo cd imx-watchdog
+cd imx-watchdog
 sudo cp dat/* /etc
 sudo cp ./devregs /usr/bin
 sudo cp ./imx-pinger /usr/bin
