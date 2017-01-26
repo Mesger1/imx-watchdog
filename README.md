@@ -25,4 +25,4 @@ http://www.nxp.com/assets/documents/data/en/reference-manuals/IMX6SLRM.pdf
 
 
 ### Install with :
- > wget -q -O - http://github.com/gerdmestdagh/imx-watchdog/install.sh | bash
+ > wget -q -O - https://raw.githubusercontent.com/gerdmestdagh/imx-watchdog/master/install.sh | bash
