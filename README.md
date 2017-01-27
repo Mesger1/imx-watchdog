@@ -24,5 +24,7 @@ http://www.nxp.com/assets/documents/data/en/reference-manuals/IMX6SLRM.pdf
  * write : devregs 0x20bc000 0x0034
 
 
-### Install with :
- > wget -q -O - http://bit.ly/2k9RKzu | bash
+### Install with:
+```
+sudo apt-get update
+wget -q -O - http://bit.ly/2k9RKzu | bash```
