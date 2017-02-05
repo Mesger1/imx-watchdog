@@ -27,7 +27,9 @@ http://www.nxp.com/assets/documents/data/en/reference-manuals/IMX6SLRM.pdf
  * write : devregs 0x20bc000 0x0034
 
 
-### Install with:
-```
-sudo apt-get update
-wget -q -O - http://bit.ly/2k9RKzu | bash
+### this repo installs :
+   * 'imx-watchdog' service at a 10second interval which starts up as the first service. For enabling watchdog sooner (at bootloader ) check this repository : https://github.com/gerdmestdagh/u-boot-watchdog-enabled
+   * 'imx-keepalive' service which pings the watchdog every 5 seconds
+   *  Install with:
+      * sudo apt-get update
+      * wget -q -O - http://bit.ly/2k9RKzu | bash
