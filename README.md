@@ -9,7 +9,7 @@ http://www.nxp.com/assets/documents/data/en/reference-manuals/IMX6SLRM.pdf
  * https://github.com/boundarydevices/devregs
  * copy .dat files to /etc/
  * compile src/devregs.cpp with :
- * arm-linux-gnueabihf-g++ -static -march=armv7 devregs.cpp -o devregs
+    * arm-linux-gnueabihf-g++ -static -march=armv7 devregs.cpp -o devregs
 
 ### 0x20bc000 watchdog :
  * write 0x0034 activate with 0.5 sec timout
