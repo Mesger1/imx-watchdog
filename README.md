@@ -19,10 +19,9 @@ http://www.nxp.com/assets/documents/data/en/reference-manuals/IMX6SLRM.pdf
 ### 0x20bc002 ping address:
  * write 0x5555 and subsequently 0xAAAA for reset timer (this is what the wd_keepalive service is for)
  * example : 
-   ```
-   - devregs 0x20BC002 0x5555
-   - devregs 0x20BC002 0xAAAA
-   ```
+   * devregs 0x20BC002 0x5555
+   * devregs 0x20BC002 0xAAAA
+   
 ### syntax for devregs is :
  * read : devregs 0x20bc000
  * write : devregs 0x20bc000 0x0034
